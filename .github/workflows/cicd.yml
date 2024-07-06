@@ -19,7 +19,7 @@ jobs:
       - name: Build docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/expense-tracker-server:0.0.1.RELEASE .
       - name: Push image to docker
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/expense-tracker-server:0.0.1.RELASE
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/expense-tracker-server:0.0.1.RELEASE
 
   deploy:
     needs: build
