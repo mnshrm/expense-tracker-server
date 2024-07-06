@@ -26,6 +26,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull ${{ secrets.DOCKER_USERNAME }}/expense-tracker-server:0.0.1.RELASE
+        run: docker pull ${{ secrets.DOCKER_USERNAME }}/expense-tracker-server:0.0.1.RELEASE
       - name: Run docker container
         run: docker run -d -p 3000:3000 -e MONGODB_URL=${{secrets.MONGODB_URL}} --name server mnshrm/expense-tracker-server:0.0.1.RELEASE
