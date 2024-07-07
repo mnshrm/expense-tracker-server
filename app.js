@@ -10,11 +10,7 @@ const { transactionsRouter } = require("./routes/transactionsRoutes");
 const { transactionRouter } = require("./routes/transactionRoutes");
 
 const app = express();
-app.use(
-  cors({
-    origin: "http://localhost:4000",
-  })
-);
+app.use(cors());
 app.use(morgan("dev"));
 
 app.use(express.json({ urlEncoded: false }));
